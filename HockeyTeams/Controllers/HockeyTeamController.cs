@@ -11,16 +11,24 @@ namespace HockeyTeams.Controllers
 {
     public class HockeyTeamController : Controller
     {
+        private readonly HockeyTeamContext _dbContext;
+        
+        public HockeyTeamController(HockeyTeamContext context)
+        {
+            _dbContext = context;
+        }
+
         // 
-        // GET: /HockeyTeam/
-        public IActionResult Index(string division = "")
+        // GET: /HockeyTeam/ 
+        public async Task<IActionResult> Index(string division = "")
         {
             if (string.IsNullOrEmpty(division)) {
                 ViewData["BaseMessage"] = "List all Hockey Teams Here";
             } else {
                 ViewData["BaseMessage"] = $"Filtering Teams By The {division} Division";
             }
-            return View();
+
+            return View(await Task.FromResult(_dbContext.Teams.ToList()));
         }
 
         // 

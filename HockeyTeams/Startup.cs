@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using HockeyTeams.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace HockeyTeams
 {
@@ -31,6 +33,8 @@ namespace HockeyTeams
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddDbContext<HockeyTeamContext>(options =>
+            options.UseSqlite(Configuration.GetConnectionString("HockeyTeamContext")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -58,6 +62,9 @@ namespace HockeyTeams
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(
+                    name: "divisional",
+                    template: "{controller=HockeyTeam}/{action=Index}/{division?}");
             });
         }
     }
