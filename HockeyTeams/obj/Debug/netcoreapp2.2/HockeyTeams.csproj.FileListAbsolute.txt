@@ -28,3 +28,4 @@ C:\Users\brian\Documents\Code\CSharp\hockey-team-mvc\HockeyTeams\obj\Debug\netco
 C:\Users\brian\Documents\Code\CSharp\hockey-team-mvc\HockeyTeams\obj\Debug\netcoreapp2.2\HockeyTeams.dll
 C:\Users\brian\Documents\Code\CSharp\hockey-team-mvc\HockeyTeams\obj\Debug\netcoreapp2.2\HockeyTeams.pdb
 C:\Users\brian\Documents\Code\CSharp\hockey-team-mvc\HockeyTeams\obj\Debug\netcoreapp2.2\HockeyTeams.csproj.CopyComplete
+C:\Users\brian\Documents\Code\CSharp\hockey-team-mvc\HockeyTeams\obj\Debug\netcoreapp2.2\Razor\Views\HockeyTeam\Index.g.cshtml.cs

@@ -13,14 +13,14 @@ namespace HockeyTeams.Controllers
     {
         // 
         // GET: /HockeyTeam/
-
-        public string Index(string division = "")
+        public IActionResult Index(string division = "")
         {
             if (string.IsNullOrEmpty(division)) {
-                return "List all Hockey Teams Here";
+                ViewData["BaseMessage"] = "List all Hockey Teams Here";
             } else {
-                return HttpUtility.HtmlEncode($"Filtering Teams By The {division} Division");
+                ViewData["BaseMessage"] = $"Filtering Teams By The {division} Division";
             }
+            return View();
         }
 
         // 

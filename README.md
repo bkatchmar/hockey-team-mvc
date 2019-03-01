@@ -9,3 +9,5 @@ code -r HockeyTeams
 ```
 
 Code largely written while following steps laid out on [Docs.Microsoft.com](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-2.2&tabs=visual-studio)
+
+As always is the case it seems with .NET MVC, every time I step away from MVC development it seems to undergo radical changes. So I am creating this repo starting March 2019 with what should be the most up to date development at the time.
