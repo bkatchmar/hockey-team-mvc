@@ -7,3 +7,5 @@ Project was created using the following commands in VS Code;
 dotnet new mvc -o HockeyTeams
 code -r HockeyTeams
 ```
+
+Code largely written while following steps laid out on [Docs.Microsoft.com](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-2.2&tabs=visual-studio)
