@@ -59,12 +59,8 @@ namespace HockeyTeams
 
             app.UseMvc(routes =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-                routes.MapRoute(
-                    name: "divisional",
-                    template: "{controller=HockeyTeam}/{action=Index}/{division?}");
+                routes.MapRoute("divisional", "HockeyTeam/{division}", defaults: new { controller = "HockeyTeam", action = "Index" });
+                routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
