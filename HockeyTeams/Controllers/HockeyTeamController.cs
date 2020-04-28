@@ -40,5 +40,13 @@ namespace HockeyTeams.Controllers
             if (team == null) { return NotFound(); }
             return View("~/Views/HockeyTeam/IndividualTeam.cshtml", team);
         }
+
+        // GET: /HockeyTeam/GetAll
+        [HttpGet]
+        public async Task<ActionResult> GetAll()
+        {
+            var teams = await Task.FromResult(_dbContext.Teams.ToList());
+            return Ok(teams);
+        }
     }
 }
