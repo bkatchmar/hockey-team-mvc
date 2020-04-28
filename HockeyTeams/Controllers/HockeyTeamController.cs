@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+using HockeyTeams.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
-using Microsoft.AspNetCore.Mvc;
-using HockeyTeams.Models;
 
 namespace HockeyTeams.Controllers
 {

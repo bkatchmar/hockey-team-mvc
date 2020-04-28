@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore;
+﻿using HockeyTeams.Models;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
-using Microsoft.EntityFrameworkCore;
-using HockeyTeams.Models;
 
 namespace HockeyTeams
 {
